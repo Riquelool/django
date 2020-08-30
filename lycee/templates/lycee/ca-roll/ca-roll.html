@@ -1,0 +1,15 @@
+<form method="post">
+          {% csrf_token %}
+          Date : <input name="date" type="date" class="lion01" value="{{defaultdate|date:"Y-m-d" }}" required>
+          <br>
+          {% for estudiante in estudiante_list %}
+            <input type="checkbox" id="{{estudiante.id}}" name="estudiante{{estudiante.id}}" checked>
+            <label for="estudiante{{estudiante.id}}">{{estudiante.first_name }} {{estudiante.last_name}}</label>
+            <br>
+          {% endfor %}
+          <p>Check if the student is present</p>
+          <div class="row">
+            <button class="lion02"><a href="/lycee/">Cancel</a></button>
+            <button type="submit" class="lion03">Submit</button>
+          </div>
+        </form>

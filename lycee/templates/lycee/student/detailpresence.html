@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+{% load static %}
+
+{% if list %}
+
+    {% block title %}
+        <h3>Particular Call of roll</h3>
+    {% endblock %}
+
+    {% block content %}
+
+      <h3>Absence of {{student.first_name}} {{student.last_name}} </h3>
+            <ul>
+                <li>{{list.date}}</li> 
+                <li>{{list.Reasson}}</li>
+            </ul>
+            <br>
+      <br>
+            
+    {% endblock %}
+{% endif %}
